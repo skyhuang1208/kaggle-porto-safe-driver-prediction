@@ -7,7 +7,7 @@ and **Blending linear combination method**.
 Chen-Hsi (Sky) Huang (github.com/skyhuang1208)   
 Louis Yang (github.com/louis925)  
 Luyao Zoe Xu  
-Ming Chiu  
+Ming-Chang Chiu (https://github.com/charismaticchiu)
 
 ### Achievement ###
 **Silver medal**, **164th** of 5169 in ranking  

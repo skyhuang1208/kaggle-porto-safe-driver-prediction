@@ -4,9 +4,9 @@ Using **Gradient boosting (XGBoost)** and **Artificial Neural Network (keras)**,
 and **Blending linear combination method**.
 
 ### Contributors ###
-Chen-Hsi (Sky) Huang (github.com/skyhuang1208)   
-Louis Yang (github.com/louis925)  
-Luyao Zoe Xu  
+Chen-Hsi (Sky) Huang (https://github.com/skyhuang1208)   
+Louis Yang (https://github.com/louis925)  
+Luyao Zoe Xu (https://github.com/LuyaoXu)   
 Ming-Chang Chiu (https://github.com/charismaticchiu)
 
 ### Achievement ###
@@ -18,7 +18,7 @@ In the training stages, some or all of the following techniques were used:
     - Log1p and cubic transform on right-skewed and left-skewed features
     - Cross validation
     - Grid search
-2. Blening - linear combination of all predictions from different models
+2. Blending - linear combination of all predictions from different models
     - Cross validation: determine combination weights
     - Coarse grid & fin random search
     - Probability vs rank: the combination were done using prob. or rank combine

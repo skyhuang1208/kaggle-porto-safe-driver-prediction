@@ -20,8 +20,8 @@ In the training stages, some or all of the following techniques were used:
     - Grid search
 2. Blending - linear combination of all predictions from different models
     - Cross validation: determine combination weights
-    - Coarse grid & fin random search
-    - Probability vs rank: the combination were done using prob. or rank combine
+    - Coarse grid & fine random search
+    - Probability vs rank combine: the combination was done for the predicted probablities or rankings of the probablities
 
 ### Scripts ###
 - blend1_search.py: input validation predictions, search for best weights w.r.t. Gini coeff. or log loss

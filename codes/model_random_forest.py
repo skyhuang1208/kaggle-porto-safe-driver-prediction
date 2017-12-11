@@ -1,25 +1,17 @@
 # coding: utf-8
-# # XGBoost model to predict a driver's probablity of filing an insurance claim
+# Kaggle - Predict a driver's probablity of filing an insurance claim
+#
+# Sklearn Random Forest Classifier
+#
+# by Sky and Louis
 #
 # The data is taken from Kaggle Competition - Porto Seguro https://www.kaggle.com/c/porto-seguro-safe-driver-prediction
-
-# Modify codes by Sky from LX
+#
+# original filename: random_forest_sky_v0.py
 
 # ## Import Libraries
 import pandas as pd
 import numpy as np
-import xgboost as xgb
-
-#import matplotlib.pylab as plt
-#get_ipython().magic(u'matplotlib inline')
-#from matplotlib.pylab import rcParams
-#rcParams['figure.figsize'] = 12, 4
-
-
-
-
-########## **********  Various functions which I didn't do look  ********** ##########
-
 
 # Define the gini metric - from https://www.kaggle.com/c/ClaimPredictionChallenge/discussion/703#5897
 def gini(actual, pred):
@@ -35,31 +27,10 @@ def gini(actual, pred):
 def gini_normalized(actual, pred):
     return gini(actual, pred) / gini(actual, actual)
 
-# Create an XGBoost-compatible Gini metric
-def gini_xgb(preds, dtrain):
-    labels = dtrain.get_label()
-    gini_score = gini_normalized(labels, preds)
-    return [('gini', gini_score)]
-
-def gini_xgb_min(preds, dtrain):
-    labels = dtrain.get_label()
-    gini_score = gini_normalized(labels, preds)
-    return [('gini', -1*gini_score)]
-
-# Some functions from Andy: https://www.kaggle.com/aharless/xgboost-cv-lb-284
-
-
-
-########## **********  Various functions which I didn't do look   ********** ##########
-
-
-
-
-
 # Data exploration
-train = pd.read_csv('data/train.csv', na_values=-1)
+train = pd.read_csv('../input/train.csv', na_values=-1)
 if True: # if pars search, turn off can reduce mem use
-    test = pd.read_csv('data/test.csv', na_values=-1)
+    test = pd.read_csv('../input/test.csv', na_values=-1)
 
 pos_count = train[train['target']==1]['target'].count() 
 neg_count = train.shape[0] - pos_count
@@ -196,4 +167,4 @@ if True: # Train & Predict
     y_pred= train_pred(X_train, y_train, X_test)
         
     # Save test results to csv file
-    pd.DataFrame({"id": test['id'], "target": y_pred}).to_csv('sub_sky_rf_maxd10minsample10.csv', index=False, header=True)
+    pd.DataFrame({"id": test['id'], "target": y_pred}).to_csv('../results/sub_sky_rf_maxd10minsample10.csv', index=False, header=True)

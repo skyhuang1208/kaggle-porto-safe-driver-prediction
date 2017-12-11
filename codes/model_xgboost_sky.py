@@ -4,6 +4,7 @@
 # The data is taken from Kaggle Competition - Porto Seguro https://www.kaggle.com/c/porto-seguro-safe-driver-prediction
 
 # Modify codes by Sky from LX
+# Original code: xgboost_sky_buildBlendModel_5_1000.py
 
 # ## Import Libraries
 import pandas as pd

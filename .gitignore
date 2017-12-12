@@ -1,5 +1,10 @@
 # Kaggle data
 working_codes/
+cheating/
+dataLCM/
+xgboost_build/
+main/
+To_do.txt
 
 # Keras Model files
 *.h5
@@ -20,6 +25,9 @@ working_codes/
 
 # Python 3 caches
 __pycache__/
+
+# Dropbox
+.dropbox
 
 # =========================
 # Operating System Files
